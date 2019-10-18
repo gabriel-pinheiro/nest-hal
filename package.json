@@ -4,6 +4,10 @@
   "description": "A Nest library for HAL+JSON responses",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabriel-pinheiro/nest-hal"
+  },
   "scripts": {
     "ci": "rm -rf dist; rm -rf node_modules; npm install; tsc",
     "watch": "concurrently --kill-others \"tsc -w\" \"nodemon dist\"",
