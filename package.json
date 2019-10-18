@@ -1,0 +1,52 @@
+{
+  "name": "nest-hal",
+  "version": "1.0.0",
+  "description": "A Nest library for HAL+JSON responses",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "ci": "rm -rf dist; rm -rf node_modules; npm install; tsc",
+    "watch": "concurrently --kill-others \"tsc -w\" \"nodemon dist\"",
+    "build": "rm -rf dist; tsc",
+    "test": "jest",
+    "clean": "rm -rf dist & rm -rf node_modules",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "hal",
+    "json"
+  ],
+  "author": "Gabriel Pinheiro",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/lodash": "^4.14.144",
+    "@types/node": "^12.7.12",
+    "concurrently": "^5.0.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.3",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.8.3",
+    "lodash": "^4.17.15",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testEnvironment": "node"
+  }
+}
